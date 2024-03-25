@@ -1,13 +1,20 @@
+:root {
+    --font: Inter;
+    --background-page: #B4CDFE;
+    --dark-blue: #153060;
+}
+
+
 body,
 html {
     margin: 0;
     padding: 0;
-    font-family: Inter;
-    background-color: #B4CDFE;
+    font-family: var(--font);
+    background-color: var(--background-page);
 }
 
 .container {
-    max-width: 700px;
+    width: 700px;
     height: 800px;
     margin: 20px auto;
     border-radius: 50px;
@@ -15,7 +22,7 @@ html {
 }
 
 .circle {
-    background-color: #153060;
+    background-color: var(--dark-blue);
     width: 700px;
     height: 150px;
     border-radius: 50px 50px 0px 0px;
@@ -44,9 +51,33 @@ html {
 }
 
 p {
-    color: #153060;
+    color: var(--dark-blue);
 }
 
 .footer {
     text-align: center;
+}
+
+@media (max-width: 1366px) and (max-height: 768px) {
+   
+    .container {
+        height: 580px;
+        width: 560px;
+    }
+   
+    .circle {
+        height: 125px; 
+        width: 560px;
+    }
+
+
+    .title {
+        font-size: 2rem; 
+    }
+
+    .text {
+        font-size: 16px; 
+        margin: 20px 30px 0px 30px;
+    }
+
 }
